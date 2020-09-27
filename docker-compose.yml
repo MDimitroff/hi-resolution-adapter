@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  hiresadaptor:
+    image: hiresadaptor
+    environment: 
+      - aws_access_key_id=1111
+      - aws_secret_access_key=10101
+      - dynamo_table_name=web31
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 5333:5000

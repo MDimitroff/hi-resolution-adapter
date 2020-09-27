@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi-Res</title>
+</head>
+<body>
+   <h1>Traffic Hi-Resolution data adaptor</h1>
+   <form method="post">
+    <div class="form-group">
+        <input type="text" name="ip" class="form-control"></input>
+        <label for="title">Ip address</label>
+    </div>
+    <div class="form-group">
+        <input type="text" name="user" class="form-control"></input>
+        <label for="title">Username</label>
+    </div> 
+    <div class="form-group">
+        <input type="text" name="pass" class="form-control"></input>
+        <label for="title">Password</label>
+    </div>     
+    <div class="form-group">
+        <label for="title">Reocur every</label>
+        <select name="reocur" id="reocur">
+            <option value="12">12h</option>
+            <option value="24">1 day</option>
+            <option value="48">2 days</option>
+            <option value="72">3 days</option>
+        </select>
+    </div>             
+    <br />
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    <br />
+    {% if values %}
+    <div>
+        <span>IP address => {{values['ip']}} </span> <br />
+        <span>User => {{values['user']}} </span> <br />
+        <span>Pass => {{values['pass']}} </span> <br />
+        <span>Reocur => {{values['reocur']}} </span> <br />
+        <span>Table name => {{values['table_name']}} </span> <br />
+        <span>Access key ID => {{values['access_key_id']}} </span> <br />
+    </div>
+    {% endif %}
+</form>   
+</body>
+</html>
