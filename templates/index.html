@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <title>Hi-Res</title>
 </head>
 <body>
-   <h1>Traffic Hi-Resolution data adaptor</h1>
+   <h1>Hi-Resolution data adaptor</h1>
    <form method="post">
     <div class="form-group">
-        <input type="text" name="ip" class="form-control"></input>
-        <label for="title">Ip address</label>
+        <label for="ip">Ip address</label>
+        <input type="text" class="form-control" name="ip" id="ip" style="width: 400px !important;">
     </div>
     <div class="form-group">
-        <input type="text" name="user" class="form-control"></input>
-        <label for="title">Username</label>
-    </div> 
+        <label for="user">Username</label>
+        <input type="text" class="form-control" name="user" id="user" style="width: 400px !important;">
+    </div>    
     <div class="form-group">
-        <input type="text" name="pass" class="form-control"></input>
-        <label for="title">Password</label>
-    </div>     
-    <div class="form-group">
-        <label for="title">Reocur every</label>
-        <select name="reocur" id="reocur">
-            <option value="12">12h</option>
-            <option value="24">1 day</option>
-            <option value="48">2 days</option>
-            <option value="72">3 days</option>
+        <label for="formGroupExampleInput2">Password</label>
+        <input type="text" class="form-control" name="pass" id="pass" style="width: 400px !important;">
+    </div>
+    <div class="form-group col-md-2">
+        <label for="inputState" style="margin-left: -14px;">Reocur every</label>
+        <select id="reocur" name="reocur" class="form-control" style="margin-left: -14px;">
+          <option selected value="12">12h</option>
+          <option value="24">1 day</option>
+          <option value="48">2 days</option>
+          <option value="72">3 days</option>
         </select>
-    </div>             
+    </div>            
     <br />
     <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
+
     <br />
     {% if values %}
     <div>
